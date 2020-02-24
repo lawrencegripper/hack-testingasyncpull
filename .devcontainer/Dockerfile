@@ -1,4 +1,4 @@
-FROM golang:1.13-stretch
+FROM golang:1.13-buster
 
 # Avoid warnings by switching to noninteractive
 ENV DEBIAN_FRONTEND=noninteractive
@@ -17,7 +17,7 @@ ENV GO111MODULE=on
 RUN apt-get update \
     && apt-get -y install --no-install-recommends apt-utils dialog rsync bash-completion jq \
     # bazel stuff
-    && apt-get -y install openjdk-8-jdk pkg-config zip g++ zlib1g-dev unzip patch \
+    && apt-get -y install openjdk-11-jdk pkg-config zip g++ zlib1g-dev unzip patch \
     #
     # Verify git, process tools, lsb-release (common in install instructions for CLIs) installed
     && apt-get -y install git iproute2 procps lsb-release \

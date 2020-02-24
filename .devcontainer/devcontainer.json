@@ -12,7 +12,7 @@
 		"--security-opt",
 		"seccomp=unconfined",
 
-		"--name", "kubernetesdevcontainer",
+		"--name", "kubernetesdevcontainer2",
 		// Mount go mod cache
 		"-v", "k8s-gomodcache:/go/pkg",
 		"-v", "k8s-bazelcache:/root/.cache/bazel/",
