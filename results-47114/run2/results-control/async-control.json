@@ -1,0 +1,47 @@
+[
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned default/control to lg-control-plane",
+    "time": "2020-02-25T12:33:26Z"
+  },
+  {
+    "reason": "Pulling",
+    "message": "Async pulling image \"gcr.io/google-containers/busybox\"",
+    "time": "2020-02-25T12:33:27Z"
+  },
+  {
+    "reason": "Pulling",
+    "message": "Async pulling image \"ubuntu\"",
+    "time": "2020-02-25T12:33:27Z"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Successfully pulled image \"gcr.io/google-containers/busybox\" (source async)",
+    "time": "2020-02-25T12:33:28Z"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container init-myservice",
+    "time": "2020-02-25T12:33:28Z"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container init-myservice",
+    "time": "2020-02-25T12:33:28Z"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Successfully pulled image \"ubuntu\" (source async)",
+    "time": "2020-02-25T12:33:39Z"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container myapp-container",
+    "time": "2020-02-25T12:33:39Z"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container myapp-container",
+    "time": "2020-02-25T12:33:39Z"
+  }
+]

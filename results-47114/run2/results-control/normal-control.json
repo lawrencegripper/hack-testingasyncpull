@@ -1,0 +1,47 @@
+[
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned default/control to control-control-plane",
+    "time": "2020-02-25T12:31:45Z"
+  },
+  {
+    "reason": "Pulling",
+    "message": "Pulling image \"gcr.io/google-containers/busybox\"",
+    "time": "2020-02-25T12:31:46Z"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Successfully pulled image \"gcr.io/google-containers/busybox\"",
+    "time": "2020-02-25T12:31:48Z"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container init-myservice",
+    "time": "2020-02-25T12:31:48Z"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container init-myservice",
+    "time": "2020-02-25T12:31:48Z"
+  },
+  {
+    "reason": "Pulling",
+    "message": "Pulling image \"ubuntu\"",
+    "time": "2020-02-25T12:31:59Z"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Successfully pulled image \"ubuntu\"",
+    "time": "2020-02-25T12:32:03Z"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container myapp-container",
+    "time": "2020-02-25T12:32:03Z"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container myapp-container",
+    "time": "2020-02-25T12:32:04Z"
+  }
+]

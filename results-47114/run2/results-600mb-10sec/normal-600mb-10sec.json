@@ -1,0 +1,47 @@
+[
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned default/600mb-10sec to control-control-plane",
+    "time": "2020-02-25T12:48:52Z"
+  },
+  {
+    "reason": "Pulling",
+    "message": "Pulling image \"gcr.io/google-containers/busybox\"",
+    "time": "2020-02-25T12:48:53Z"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Successfully pulled image \"gcr.io/google-containers/busybox\"",
+    "time": "2020-02-25T12:48:55Z"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container init-myservice",
+    "time": "2020-02-25T12:48:55Z"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container init-myservice",
+    "time": "2020-02-25T12:48:55Z"
+  },
+  {
+    "reason": "Pulling",
+    "message": "Pulling image \"lawrencegripper/big:600mb\"",
+    "time": "2020-02-25T12:49:05Z"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Successfully pulled image \"lawrencegripper/big:600mb\"",
+    "time": "2020-02-25T12:49:23Z"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container myapp-container",
+    "time": "2020-02-25T12:49:24Z"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container myapp-container",
+    "time": "2020-02-25T12:49:24Z"
+  }
+]
