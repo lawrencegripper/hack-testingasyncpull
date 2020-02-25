@@ -2,7 +2,8 @@
 
 set -e
 
-iteration=1
+iteration=0
+KIND_IMAGE_ASYNC="lawrencegripper/node:471141b2e1e70a7e0c99ef14c4ea92b4797eb9e7"
 
 run () {
     iteration=$((iteration+1))
@@ -30,7 +31,7 @@ run () {
 
     kind delete cluster --name lg || true
 
-    kind create cluster --name lg --image kindest/node:lawrence
+    kind create cluster --name lg --image $KIND_IMAGE_ASYNC
     JSONPATH='{range .items[*]}{@.metadata.name}:{range @.status.conditions[*]}{@.type}={@.status};{end}{end}'; until kubectl get nodes -o jsonpath="$JSONPATH" 2>&1 | grep -q "Ready=True"; do sleep 5; echo "--------> waiting for cluster node to be available"; done
     kubectl apply -f ./single-init/$POD_NAME.yaml
     # Wait for pod to complete
@@ -51,14 +52,14 @@ run () {
 run control
 run control
 
-sleep 300
+sleep 30
 run 200mb-10sec
 run 200mb-10sec
 
-sleep 300
+sleep 30
 run 600mb-10sec
 run 600mb-10sec
 
-sleep 300
+sleep 30
 run 1000mb-10sec
 run 1000mb-10sec

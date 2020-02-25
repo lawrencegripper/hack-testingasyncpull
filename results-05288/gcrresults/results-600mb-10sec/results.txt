@@ -1,0 +1,4 @@
+time: 32 file: ./results-600mb-10sec/normal-600mb-10sec.json runat:2020-02-25 08:39:30.353232
+time: 33 file: ./results-600mb-10sec/async-600mb-10sec.json runat:2020-02-25 08:39:30.370556
+time: 31 file: ./results-600mb-10sec/normal-600mb-10sec.json runat:2020-02-25 08:44:03.550230
+time: 32 file: ./results-600mb-10sec/async-600mb-10sec.json runat:2020-02-25 08:44:03.566359

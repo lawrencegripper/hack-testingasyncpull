@@ -1,0 +1,2 @@
+time: 43 file: ./results-1000mb-10sec/normal-1000mb-10sec.json runat:2020-02-25 12:07:31.042877
+time: 32 file: ./results-1000mb-10sec/async-1000mb-10sec.json runat:2020-02-25 12:07:31.058137

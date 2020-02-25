@@ -11,8 +11,8 @@ spec:
     command: ['sh', '-c', 'sleep 3600']
   initContainers:
   - name: init-myservice
-    image: busybox:1.28
+    image: gcr.io/google-containers/busybox
     command: ['sh', '-c', 'sleep 10']
   - name: init-mydb
-    image: busybox:1.28
+    image: gcr.io/google-containers/busybox
     command: ['sh', '-c', 'sleep 15']

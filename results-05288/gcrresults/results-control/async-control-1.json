@@ -1,0 +1,81 @@
+Name:         control
+Namespace:    default
+Priority:     0
+Node:         lg-control-plane/172.17.0.2
+Start Time:   Tue, 25 Feb 2020 08:21:19 +0000
+Labels:       app=myapp
+Annotations:  kubectl.kubernetes.io/last-applied-configuration:
+                {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"labels":{"app":"myapp"},"name":"control","namespace":"default"},"spec":{"con...
+Status:       Succeeded
+IP:           10.244.0.5
+IPs:
+  IP:  10.244.0.5
+Init Containers:
+  init-myservice:
+    Container ID:  containerd://be095ec5acae67c0802b0e05d84add481590d1b2d1016b43a1392728a5a25835
+    Image:         gcr.io/google-containers/busybox
+    Image ID:      sha256:36a4dca0fe6fb2a5133dc11a6c8907a97aea122613fa3e98be033959a0821a1f
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      sh
+      -c
+      sleep 10
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 25 Feb 2020 08:21:26 +0000
+      Finished:     Tue, 25 Feb 2020 08:21:36 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-zsj2v (ro)
+Containers:
+  myapp-container:
+    Container ID:  containerd://971b2aef02a3972ff27030cc172fef001fb0ad55f5fa69e2782a50f3eaadae21
+    Image:         ubuntu
+    Image ID:      docker.io/library/ubuntu@sha256:04d48df82c938587820d7b6006f5071dbbffceb7ca01d2814f81857c631d44df
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      sh
+      -c
+      sleep 10
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 25 Feb 2020 08:21:37 +0000
+      Finished:     Tue, 25 Feb 2020 08:21:47 +0000
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-zsj2v (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-zsj2v:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-zsj2v
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age   From                       Message
+  ----    ------     ----  ----                       -------
+  Normal  Scheduled  30s   default-scheduler          Successfully assigned default/control to lg-control-plane
+  Normal  Pulling    29s   kubelet, lg-control-plane  Async pulling image "ubuntu"
+  Normal  Pulling    29s   kubelet, lg-control-plane  Pulling image "gcr.io/google-containers/busybox"
+  Normal  Pulled     24s   kubelet, lg-control-plane  Successfully pulled image "gcr.io/google-containers/busybox"
+  Normal  Created    23s   kubelet, lg-control-plane  Created container init-myservice
+  Normal  Started    23s   kubelet, lg-control-plane  Started container init-myservice
+  Normal  Pulled     13s   kubelet, lg-control-plane  Successfully pulled image "ubuntu" (source async)
+  Normal  Created    13s   kubelet, lg-control-plane  Created container myapp-container
+  Normal  Started    12s   kubelet, lg-control-plane  Started container myapp-container

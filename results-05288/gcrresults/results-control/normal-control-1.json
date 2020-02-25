@@ -1,0 +1,81 @@
+Name:         control
+Namespace:    default
+Priority:     0
+Node:         control-control-plane/172.17.0.2
+Start Time:   Tue, 25 Feb 2020 08:19:00 +0000
+Labels:       app=myapp
+Annotations:  kubectl.kubernetes.io/last-applied-configuration:
+                {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"labels":{"app":"myapp"},"name":"control","namespace":"default"},"spec":{"con...
+Status:       Succeeded
+IP:           10.244.0.5
+IPs:
+  IP:  10.244.0.5
+Init Containers:
+  init-myservice:
+    Container ID:  containerd://8d1c8f0f92b6a7bd6624f98c33f5cfef0a36968e5283824ffc9cfefcdbbaee48
+    Image:         gcr.io/google-containers/busybox
+    Image ID:      sha256:36a4dca0fe6fb2a5133dc11a6c8907a97aea122613fa3e98be033959a0821a1f
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      sh
+      -c
+      sleep 10
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 25 Feb 2020 08:19:03 +0000
+      Finished:     Tue, 25 Feb 2020 08:19:13 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-646hw (ro)
+Containers:
+  myapp-container:
+    Container ID:  containerd://a5e6efe8d165fcbfb40c88f49e22980b89f710f712567a48c9305d12a6acdb86
+    Image:         ubuntu
+    Image ID:      docker.io/library/ubuntu@sha256:04d48df82c938587820d7b6006f5071dbbffceb7ca01d2814f81857c631d44df
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      sh
+      -c
+      sleep 10
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 25 Feb 2020 08:19:18 +0000
+      Finished:     Tue, 25 Feb 2020 08:19:28 +0000
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-646hw (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-646hw:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-646hw
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age   From                            Message
+  ----    ------     ----  ----                            -------
+  Normal  Scheduled  30s   default-scheduler               Successfully assigned default/control to control-control-plane
+  Normal  Pulling    29s   kubelet, control-control-plane  Pulling image "gcr.io/google-containers/busybox"
+  Normal  Pulled     28s   kubelet, control-control-plane  Successfully pulled image "gcr.io/google-containers/busybox"
+  Normal  Created    28s   kubelet, control-control-plane  Created container init-myservice
+  Normal  Started    27s   kubelet, control-control-plane  Started container init-myservice
+  Normal  Pulling    17s   kubelet, control-control-plane  Pulling image "ubuntu"
+  Normal  Pulled     13s   kubelet, control-control-plane  Successfully pulled image "ubuntu"
+  Normal  Created    12s   kubelet, control-control-plane  Created container myapp-container
+  Normal  Started    12s   kubelet, control-control-plane  Started container myapp-container
