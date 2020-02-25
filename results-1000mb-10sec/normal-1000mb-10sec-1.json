@@ -1,0 +1,81 @@
+Name:         1000mb-10sec
+Namespace:    default
+Priority:     0
+Node:         control-control-plane/172.17.0.2
+Start Time:   Mon, 24 Feb 2020 22:18:16 +0000
+Labels:       app=myapp
+Annotations:  kubectl.kubernetes.io/last-applied-configuration:
+                {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"labels":{"app":"myapp"},"name":"1000mb-10sec","namespace":"default"},"spec":...
+Status:       Succeeded
+IP:           10.244.0.5
+IPs:
+  IP:  10.244.0.5
+Init Containers:
+  init-myservice:
+    Container ID:  containerd://614134e179a070336aabf1b1ca75c82516b797c3da124d6721f75a188c22114b
+    Image:         busybox:1.28
+    Image ID:      docker.io/library/busybox@sha256:141c253bc4c3fd0a201d32dc1f493bcf3fff003b6df416dea4f41046e0f37d47
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      sh
+      -c
+      sleep 10
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Mon, 24 Feb 2020 22:18:21 +0000
+      Finished:     Mon, 24 Feb 2020 22:18:31 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-r26tw (ro)
+Containers:
+  myapp-container:
+    Container ID:  containerd://b7744eb5e26a528ab0596b8def258eb711c5d177d976d5e0102829cdfccefbef
+    Image:         lawrencegripper/big:1000mb
+    Image ID:      docker.io/lawrencegripper/big@sha256:c29a8b94ca66ca6681ab041f879d8838f5d0989caa7821557ffae8b0d28652ea
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      sh
+      -c
+      sleep 10
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Mon, 24 Feb 2020 22:19:01 +0000
+      Finished:     Mon, 24 Feb 2020 22:19:11 +0000
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-r26tw (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-r26tw:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-r26tw
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age   From                            Message
+  ----    ------     ----  ----                            -------
+  Normal  Scheduled  56s   default-scheduler               Successfully assigned default/1000mb-10sec to control-control-plane
+  Normal  Pulling    55s   kubelet, control-control-plane  Pulling image "busybox:1.28"
+  Normal  Pulled     52s   kubelet, control-control-plane  Successfully pulled image "busybox:1.28"
+  Normal  Created    52s   kubelet, control-control-plane  Created container init-myservice
+  Normal  Started    51s   kubelet, control-control-plane  Started container init-myservice
+  Normal  Pulling    41s   kubelet, control-control-plane  Pulling image "lawrencegripper/big:1000mb"
+  Normal  Pulled     12s   kubelet, control-control-plane  Successfully pulled image "lawrencegripper/big:1000mb"
+  Normal  Created    12s   kubelet, control-control-plane  Created container myapp-container
+  Normal  Started    11s   kubelet, control-control-plane  Started container myapp-container

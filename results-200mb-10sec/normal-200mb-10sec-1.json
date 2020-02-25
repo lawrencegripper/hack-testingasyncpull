@@ -1,0 +1,81 @@
+Name:         200mb-10sec
+Namespace:    default
+Priority:     0
+Node:         control-control-plane/172.17.0.2
+Start Time:   Mon, 24 Feb 2020 21:51:06 +0000
+Labels:       app=myapp
+Annotations:  kubectl.kubernetes.io/last-applied-configuration:
+                {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"labels":{"app":"myapp"},"name":"200mb-10sec","namespace":"default"},"spec":{...
+Status:       Succeeded
+IP:           10.244.0.5
+IPs:
+  IP:  10.244.0.5
+Init Containers:
+  init-myservice:
+    Container ID:  containerd://3786510f25d8e4ea1498fbcb80953af17e2fd3d476af2c0e2b1086204c3170c1
+    Image:         busybox:1.28
+    Image ID:      docker.io/library/busybox@sha256:141c253bc4c3fd0a201d32dc1f493bcf3fff003b6df416dea4f41046e0f37d47
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      sh
+      -c
+      sleep 10
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Mon, 24 Feb 2020 21:51:10 +0000
+      Finished:     Mon, 24 Feb 2020 21:51:20 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-qhklh (ro)
+Containers:
+  myapp-container:
+    Container ID:  containerd://02334917831d079ce99628c7dacc1ab89434da87a09d5d8ebb3939dc2d21cd58
+    Image:         lawrencegripper/big:200mb
+    Image ID:      docker.io/lawrencegripper/big@sha256:6e348f09fba68353c8f46445d37fd9f04e4a458978de305387618245da17e4ef
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      sh
+      -c
+      sleep 10
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Mon, 24 Feb 2020 21:51:29 +0000
+      Finished:     Mon, 24 Feb 2020 21:51:39 +0000
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-qhklh (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-qhklh:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-qhklh
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age   From                            Message
+  ----    ------     ----  ----                            -------
+  Normal  Scheduled  35s   default-scheduler               Successfully assigned default/200mb-10sec to control-control-plane
+  Normal  Pulling    35s   kubelet, control-control-plane  Pulling image "busybox:1.28"
+  Normal  Pulled     31s   kubelet, control-control-plane  Successfully pulled image "busybox:1.28"
+  Normal  Created    31s   kubelet, control-control-plane  Created container init-myservice
+  Normal  Started    31s   kubelet, control-control-plane  Started container init-myservice
+  Normal  Pulling    20s   kubelet, control-control-plane  Pulling image "lawrencegripper/big:200mb"
+  Normal  Pulled     12s   kubelet, control-control-plane  Successfully pulled image "lawrencegripper/big:200mb"
+  Normal  Created    12s   kubelet, control-control-plane  Created container myapp-container
+  Normal  Started    12s   kubelet, control-control-plane  Started container myapp-container

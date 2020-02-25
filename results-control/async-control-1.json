@@ -1,0 +1,81 @@
+Name:         control
+Namespace:    default
+Priority:     0
+Node:         lg-control-plane/172.17.0.2
+Start Time:   Mon, 24 Feb 2020 21:40:00 +0000
+Labels:       app=myapp
+Annotations:  kubectl.kubernetes.io/last-applied-configuration:
+                {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"labels":{"app":"myapp"},"name":"control","namespace":"default"},"spec":{"con...
+Status:       Succeeded
+IP:           10.244.0.5
+IPs:
+  IP:  10.244.0.5
+Init Containers:
+  init-myservice:
+    Container ID:  containerd://959871a4c92df75493a097117472ac5f22a8414ab0e03e45f7047191d90e9686
+    Image:         busybox:1.28
+    Image ID:      docker.io/library/busybox@sha256:141c253bc4c3fd0a201d32dc1f493bcf3fff003b6df416dea4f41046e0f37d47
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      sh
+      -c
+      sleep 10
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Mon, 24 Feb 2020 21:40:08 +0000
+      Finished:     Mon, 24 Feb 2020 21:40:19 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-9ldkh (ro)
+Containers:
+  myapp-container:
+    Container ID:  containerd://0cc567596b80d74e009a740a5d199721ec71178f71abdb9fc95366b2fda533ce
+    Image:         ubuntu
+    Image ID:      docker.io/library/ubuntu@sha256:04d48df82c938587820d7b6006f5071dbbffceb7ca01d2814f81857c631d44df
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      sh
+      -c
+      sleep 10
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Mon, 24 Feb 2020 21:40:19 +0000
+      Finished:     Mon, 24 Feb 2020 21:40:29 +0000
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-9ldkh (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-9ldkh:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-9ldkh
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age   From                       Message
+  ----    ------     ----  ----                       -------
+  Normal  Scheduled  30s   default-scheduler          Successfully assigned default/control to lg-control-plane
+  Normal  Pulling    29s   kubelet, lg-control-plane  Async pulling image "ubuntu"
+  Normal  Pulling    29s   kubelet, lg-control-plane  Pulling image "busybox:1.28"
+  Normal  Pulled     22s   kubelet, lg-control-plane  Successfully pulled image "busybox:1.28"
+  Normal  Created    22s   kubelet, lg-control-plane  Created container init-myservice
+  Normal  Started    22s   kubelet, lg-control-plane  Started container init-myservice
+  Normal  Pulled     11s   kubelet, lg-control-plane  Successfully pulled image "ubuntu" (source async)
+  Normal  Created    11s   kubelet, lg-control-plane  Created container myapp-container
+  Normal  Started    11s   kubelet, lg-control-plane  Started container myapp-container

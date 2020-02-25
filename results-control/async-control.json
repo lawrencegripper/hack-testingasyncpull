@@ -1,47 +1,47 @@
 [
   {
     "reason": "Scheduled",
-    "message": "Successfully assigned default/1000mb-10sec to control-control-plane",
-    "time": "2020-02-24T22:18:16Z"
+    "message": "Successfully assigned default/control to lg-control-plane",
+    "time": "2020-02-24T21:40:00Z"
+  },
+  {
+    "reason": "Pulling",
+    "message": "Async pulling image \"ubuntu\"",
+    "time": "2020-02-24T21:40:01Z"
   },
   {
     "reason": "Pulling",
     "message": "Pulling image \"busybox:1.28\"",
-    "time": "2020-02-24T22:18:17Z"
+    "time": "2020-02-24T21:40:01Z"
   },
   {
     "reason": "Pulled",
     "message": "Successfully pulled image \"busybox:1.28\"",
-    "time": "2020-02-24T22:18:20Z"
+    "time": "2020-02-24T21:40:08Z"
   },
   {
     "reason": "Created",
     "message": "Created container init-myservice",
-    "time": "2020-02-24T22:18:20Z"
+    "time": "2020-02-24T21:40:08Z"
   },
   {
     "reason": "Started",
     "message": "Started container init-myservice",
-    "time": "2020-02-24T22:18:21Z"
-  },
-  {
-    "reason": "Pulling",
-    "message": "Pulling image \"lawrencegripper/big:1000mb\"",
-    "time": "2020-02-24T22:18:31Z"
+    "time": "2020-02-24T21:40:08Z"
   },
   {
     "reason": "Pulled",
-    "message": "Successfully pulled image \"lawrencegripper/big:1000mb\"",
-    "time": "2020-02-24T22:19:00Z"
+    "message": "Successfully pulled image \"ubuntu\" (source async)",
+    "time": "2020-02-24T21:40:19Z"
   },
   {
     "reason": "Created",
     "message": "Created container myapp-container",
-    "time": "2020-02-24T22:19:00Z"
+    "time": "2020-02-24T21:40:19Z"
   },
   {
     "reason": "Started",
     "message": "Started container myapp-container",
-    "time": "2020-02-24T22:19:01Z"
+    "time": "2020-02-24T21:40:19Z"
   }
 ]

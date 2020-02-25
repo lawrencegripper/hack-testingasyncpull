@@ -1,0 +1,6 @@
+time: 21 file: ./results-control/normal-control.json runat:2020-02-24 21:19:43.888301
+time: 20 file: ./results-control/async-control.json runat:2020-02-24 21:19:43.903675
+time: 20 file: ./results-control/normal-control.json runat:2020-02-24 21:36:30.637570
+time: 19 file: ./results-control/async-control.json runat:2020-02-24 21:36:30.652796
+time: 24 file: ./results-control/normal-control.json runat:2020-02-24 21:40:31.718847
+time: 19 file: ./results-control/async-control.json runat:2020-02-24 21:40:31.733388

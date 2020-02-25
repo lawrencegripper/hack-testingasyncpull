@@ -2,46 +2,46 @@
   {
     "reason": "Scheduled",
     "message": "Successfully assigned default/200mb-10sec to control-control-plane",
-    "time": "2020-02-24T15:58:21Z"
+    "time": "2020-02-24T21:51:06Z"
   },
   {
     "reason": "Pulling",
     "message": "Pulling image \"busybox:1.28\"",
-    "time": "2020-02-24T15:58:21Z"
+    "time": "2020-02-24T21:51:06Z"
   },
   {
     "reason": "Pulled",
     "message": "Successfully pulled image \"busybox:1.28\"",
-    "time": "2020-02-24T15:58:27Z"
+    "time": "2020-02-24T21:51:10Z"
   },
   {
     "reason": "Created",
     "message": "Created container init-myservice",
-    "time": "2020-02-24T15:58:27Z"
+    "time": "2020-02-24T21:51:10Z"
   },
   {
     "reason": "Started",
     "message": "Started container init-myservice",
-    "time": "2020-02-24T15:58:27Z"
+    "time": "2020-02-24T21:51:10Z"
   },
   {
     "reason": "Pulling",
     "message": "Pulling image \"lawrencegripper/big:200mb\"",
-    "time": "2020-02-24T15:58:38Z"
+    "time": "2020-02-24T21:51:21Z"
   },
   {
     "reason": "Pulled",
     "message": "Successfully pulled image \"lawrencegripper/big:200mb\"",
-    "time": "2020-02-24T15:58:51Z"
+    "time": "2020-02-24T21:51:29Z"
   },
   {
     "reason": "Created",
     "message": "Created container myapp-container",
-    "time": "2020-02-24T15:58:51Z"
+    "time": "2020-02-24T21:51:29Z"
   },
   {
     "reason": "Started",
     "message": "Started container myapp-container",
-    "time": "2020-02-24T15:58:51Z"
+    "time": "2020-02-24T21:51:29Z"
   }
 ]

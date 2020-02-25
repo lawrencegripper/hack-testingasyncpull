@@ -1,0 +1,81 @@
+Name:         200mb-10sec
+Namespace:    default
+Priority:     0
+Node:         lg-control-plane/172.17.0.2
+Start Time:   Mon, 24 Feb 2020 21:52:46 +0000
+Labels:       app=myapp
+Annotations:  kubectl.kubernetes.io/last-applied-configuration:
+                {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"labels":{"app":"myapp"},"name":"200mb-10sec","namespace":"default"},"spec":{...
+Status:       Succeeded
+IP:           10.244.0.3
+IPs:
+  IP:  10.244.0.3
+Init Containers:
+  init-myservice:
+    Container ID:  containerd://7724173f69ca4651c958244b7139a9c105ce400a63074bf14c6b5b14a189c996
+    Image:         busybox:1.28
+    Image ID:      docker.io/library/busybox@sha256:141c253bc4c3fd0a201d32dc1f493bcf3fff003b6df416dea4f41046e0f37d47
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      sh
+      -c
+      sleep 10
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Mon, 24 Feb 2020 21:52:59 +0000
+      Finished:     Mon, 24 Feb 2020 21:53:09 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-pv9fp (ro)
+Containers:
+  myapp-container:
+    Container ID:  containerd://94b371ea7f9ff8fe650937f432ba0e82a65c38ca2fd7720c1d3edbda154d11cc
+    Image:         lawrencegripper/big:200mb
+    Image ID:      docker.io/lawrencegripper/big@sha256:6e348f09fba68353c8f46445d37fd9f04e4a458978de305387618245da17e4ef
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      sh
+      -c
+      sleep 10
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Mon, 24 Feb 2020 21:53:10 +0000
+      Finished:     Mon, 24 Feb 2020 21:53:20 +0000
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-pv9fp (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-pv9fp:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-pv9fp
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age   From                       Message
+  ----    ------     ----  ----                       -------
+  Normal  Scheduled  36s   default-scheduler          Successfully assigned default/200mb-10sec to lg-control-plane
+  Normal  Pulling    35s   kubelet, lg-control-plane  Async pulling image "lawrencegripper/big:200mb"
+  Normal  Pulling    35s   kubelet, lg-control-plane  Pulling image "busybox:1.28"
+  Normal  Pulled     23s   kubelet, lg-control-plane  Successfully pulled image "busybox:1.28"
+  Normal  Created    23s   kubelet, lg-control-plane  Created container init-myservice
+  Normal  Started    23s   kubelet, lg-control-plane  Started container init-myservice
+  Normal  Pulled     12s   kubelet, lg-control-plane  Successfully pulled image "lawrencegripper/big:200mb" (source async)
+  Normal  Created    12s   kubelet, lg-control-plane  Created container myapp-container
+  Normal  Started    12s   kubelet, lg-control-plane  Started container myapp-container
