@@ -35,3 +35,13 @@ time: 13 file: ./results-200mb-10sec/**async**-200mb-10sec.json runat:2020-02-25
 time: 29 file: ./results-200mb-10sec/**normal**-200mb-10sec.json runat:2020-02-25 11:52:58.657274
 time: 13 file: ./results-200mb-10sec/**async**-200mb-10sec.json runat:2020-02-25 11:52:58.672962
 ```
+
+This results is repeated in [results-ed5bb](./results-47114) testing [commit ed5bb](https://github.com/lawrencegripper/kubernetes/commit/ed5bb06aed76cddef22a6f58564036386799076b) this refactors out shared code between async and normal pull then adds testing. 
+
+Example 600mb container with 10sec init:
+```
+time: 69 file: ./results-600mb-10sec/normal-600mb-10sec.json runat:2020-03-09 17:33:31.240605
+time: 21 file: ./results-600mb-10sec/async-600mb-10sec.json runat:2020-03-09 17:33:31.258819
+time: 31 file: ./results-600mb-10sec/normal-600mb-10sec.json runat:2020-03-09 17:37:11.558668
+time: 21 file: ./results-600mb-10sec/async-600mb-10sec.json runat:2020-03-09 17:37:11.574015
+```

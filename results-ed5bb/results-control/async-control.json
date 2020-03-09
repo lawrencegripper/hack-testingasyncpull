@@ -1,0 +1,67 @@
+[
+  {
+    "reason": "FailedScheduling",
+    "message": "0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn't tolerate.",
+    "time": null
+  },
+  {
+    "reason": "FailedScheduling",
+    "message": "0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn't tolerate.",
+    "time": null
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned default/control to lg-control-plane",
+    "time": null
+  },
+  {
+    "reason": "Pulling",
+    "message": "Async pulling image \"gcr.io/google-containers/busybox\"",
+    "time": "2020-03-09T17:22:33Z"
+  },
+  {
+    "reason": "Pulling",
+    "message": "Async pulling image \"ubuntu\"",
+    "time": "2020-03-09T17:22:33Z"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Retrieved async pull request for \"gcr.io/google-containers/busybox\"",
+    "time": "2020-03-09T17:22:33Z"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Successfully pulled image \"gcr.io/google-containers/busybox\"",
+    "time": "2020-03-09T17:22:35Z"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container init-myservice",
+    "time": "2020-03-09T17:22:35Z"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container init-myservice",
+    "time": "2020-03-09T17:22:35Z"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Retrieved async pull request for \"ubuntu\"",
+    "time": "2020-03-09T17:22:46Z"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Successfully pulled image \"ubuntu\"",
+    "time": "2020-03-09T17:22:46Z"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container myapp-container",
+    "time": "2020-03-09T17:22:46Z"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container myapp-container",
+    "time": "2020-03-09T17:22:46Z"
+  }
+]

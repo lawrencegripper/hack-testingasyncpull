@@ -1,0 +1,62 @@
+[
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned default/1000mb-10sec to lg-control-plane",
+    "time": "2020-03-09T17:44:49Z"
+  },
+  {
+    "reason": "TaintManagerEviction",
+    "message": "Cancelling deletion of Pod default/1000mb-10sec",
+    "time": "2020-03-09T17:44:50Z"
+  },
+  {
+    "reason": "Pulling",
+    "message": "Async pulling image \"gcr.io/google-containers/busybox\"",
+    "time": "2020-03-09T17:44:50Z"
+  },
+  {
+    "reason": "Pulling",
+    "message": "Async pulling image \"lawrencegripper/big:1000mb\"",
+    "time": "2020-03-09T17:44:50Z"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Retrieved async pull request for \"gcr.io/google-containers/busybox\"",
+    "time": "2020-03-09T17:44:50Z"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Successfully pulled image \"gcr.io/google-containers/busybox\"",
+    "time": "2020-03-09T17:44:51Z"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container init-myservice",
+    "time": "2020-03-09T17:44:51Z"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container init-myservice",
+    "time": "2020-03-09T17:44:51Z"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Retrieved async pull request for \"lawrencegripper/big:1000mb\"",
+    "time": "2020-03-09T17:45:02Z"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Successfully pulled image \"lawrencegripper/big:1000mb\"",
+    "time": "2020-03-09T17:45:21Z"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container myapp-container",
+    "time": "2020-03-09T17:45:22Z"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container myapp-container",
+    "time": "2020-03-09T17:45:22Z"
+  }
+]

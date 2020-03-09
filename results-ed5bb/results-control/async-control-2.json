@@ -1,0 +1,85 @@
+Name:         control
+Namespace:    default
+Priority:     0
+Node:         lg-control-plane/172.17.0.3
+Start Time:   Mon, 09 Mar 2020 17:22:32 +0000
+Labels:       app=myapp
+Annotations:  kubectl.kubernetes.io/last-applied-configuration:
+                {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"labels":{"app":"myapp"},"name":"control","namespace":"default"},"spec":{"con...
+Status:       Succeeded
+IP:           10.244.0.2
+IPs:
+  IP:  10.244.0.2
+Init Containers:
+  init-myservice:
+    Container ID:  containerd://261bd2b45b613633f52894840884088b579a9a32b12984b63ff80ac9b17954d8
+    Image:         gcr.io/google-containers/busybox
+    Image ID:      sha256:36a4dca0fe6fb2a5133dc11a6c8907a97aea122613fa3e98be033959a0821a1f
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      sh
+      -c
+      sleep 10
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Mon, 09 Mar 2020 17:22:35 +0000
+      Finished:     Mon, 09 Mar 2020 17:22:45 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-svnzr (ro)
+Containers:
+  myapp-container:
+    Container ID:  containerd://ac521c0d38721276ce12aa93513649c6afeb99bbaec3bf177bbaa8a31912f546
+    Image:         ubuntu
+    Image ID:      docker.io/library/ubuntu@sha256:04d48df82c938587820d7b6006f5071dbbffceb7ca01d2814f81857c631d44df
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      sh
+      -c
+      sleep 10
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Mon, 09 Mar 2020 17:22:46 +0000
+      Finished:     Mon, 09 Mar 2020 17:22:56 +0000
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-svnzr (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-svnzr:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-svnzr
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From                       Message
+  ----     ------            ----       ----                       -------
+  Warning  FailedScheduling  <unknown>  default-scheduler          0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler          0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler          Successfully assigned default/control to lg-control-plane
+  Normal   Pulling           27s        kubelet, lg-control-plane  Async pulling image "gcr.io/google-containers/busybox"
+  Normal   Pulling           27s        kubelet, lg-control-plane  Async pulling image "ubuntu"
+  Normal   Pulled            27s        kubelet, lg-control-plane  Retrieved async pull request for "gcr.io/google-containers/busybox"
+  Normal   Pulled            25s        kubelet, lg-control-plane  Successfully pulled image "gcr.io/google-containers/busybox"
+  Normal   Created           25s        kubelet, lg-control-plane  Created container init-myservice
+  Normal   Started           25s        kubelet, lg-control-plane  Started container init-myservice
+  Normal   Pulled            14s        kubelet, lg-control-plane  Retrieved async pull request for "ubuntu"
+  Normal   Pulled            14s        kubelet, lg-control-plane  Successfully pulled image "ubuntu"
+  Normal   Created           14s        kubelet, lg-control-plane  Created container myapp-container
+  Normal   Started           14s        kubelet, lg-control-plane  Started container myapp-container

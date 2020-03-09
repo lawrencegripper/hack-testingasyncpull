@@ -3,7 +3,7 @@
 set -e
 
 iteration=0
-KIND_IMAGE_ASYNC="lawrencegripper/node:471141b2e1e70a7e0c99ef14c4ea92b4797eb9e7"
+KIND_IMAGE_ASYNC="lawrencegripper/node:ed5bb06aed76cddef22a6f58564036386799076b"
 
 run () {
     iteration=$((iteration+1))
@@ -52,14 +52,14 @@ run () {
 run control
 run control
 
-sleep 30
+# sleep 30
 run 200mb-10sec
 run 200mb-10sec
 
-sleep 30
+# sleep 30
 run 600mb-10sec
 run 600mb-10sec
 
-sleep 30
+# sleep 30
 run 1000mb-10sec
 run 1000mb-10sec

@@ -12,14 +12,14 @@
 		"--security-opt",
 		"seccomp=unconfined",
 
-		"--name", "kubernetesdevcontainer2",
+		"--name", "kubernetesdevcontainer-test",
 		// Mount go mod cache
-		"-v", "k8s-gomodcache:/go/pkg",
-		"-v", "k8s-bazelcache:/root/.cache/bazel/",
+		"-v", "k8stest-gomodcache:/go/pkg",
+		"-v", "k8stest-bazelcache:/root/.cache/bazel/",
 		// Cache vscode exentsions installs and homedir
-		"-v", "k8s-vscodecache:/root/.vscode-server",
+		"-v", "k8stest-vscodecache:/root/.vscode-server",
 		// Keep command history 
-		"-v", "k8s-bashhistory:/root/commandhistory",
+		"-v", "k8stest-bashhistory:/root/commandhistory",
 		// Mount docker socket for docker builds
 		"-v", "/var/run/docker.sock:/var/run/docker.sock",
 		// Use host network
